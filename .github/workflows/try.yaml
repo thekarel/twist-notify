@@ -4,12 +4,14 @@ on:
     inputs:
       topic:
         description: 'The topic to use - will be created if it does not exist'
-        required: true
+        required: false
         type: string
+        default: 'Test'
       message:
         description: 'The message to send - can be markdown'
-        required: true
+        required: false
         type: string
+        default: 'Hello'
 jobs:
   message:
     runs-on: ubuntu-latest

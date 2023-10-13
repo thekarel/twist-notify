@@ -10,7 +10,7 @@ on:
         type: string
 jobs:
   message:
-    runs-on: ubuntu@latest
+    runs-on: ubuntu-latest
     steps:
     - name: Send POST request
       uses: thekarel/twist-notify@main

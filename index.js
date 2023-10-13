@@ -3,8 +3,6 @@ const axios = require('axios')
 
 async function run() {
   try {
-    const client = new http.HttpClient('thekarel/twist-notify');
-
     const url = core.getInput('url');
     console.log("url.length", url.length);
     const topic = core.getInput('topic');

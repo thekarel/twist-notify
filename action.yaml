@@ -1,5 +1,6 @@
 name: 'Twist Notify'
 description: 'Send updates from your workflows to a Twist channel'
+ico
 inputs:
   url:
     description: 'The Twist webhook URL'
@@ -16,3 +17,6 @@ inputs:
 runs:
   using: 'node20'
   main: 'index.js'
+branding:
+  icon: 'message-square'
+  color: 'purple'

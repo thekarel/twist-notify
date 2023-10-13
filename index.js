@@ -8,10 +8,9 @@ async function run() {
     const topic = core.getInput('topic');
     const message = core.getInput('message');
 
-
     const response = await axios.post(url, {
-      topic,
-      message
+      title: topic,
+      content: message
     });
 
     console.log(`Response status: ${response.status}`);

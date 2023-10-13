@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const http = require('@actions/http-client');
+const axios = require('axios')
 
 async function run() {
   try {
@@ -11,10 +11,12 @@ async function run() {
     const message = core.getInput('message');
 
 
-    const payload = JSON.stringify({ topic, message })
-    const additional = { headers: { 'Content-Type': 'application/json' } }
+    const response = await axios.post(url, {
+      topic,
+      message
+    });
 
-    await client.post(url, payload, additional);
+    console.log(`Response status: ${response.status}`);
   } catch (error) {
     core.setFailed(error.message);
   }

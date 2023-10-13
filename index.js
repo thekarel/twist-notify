@@ -7,7 +7,7 @@ async function run() {
     const topic = core.getInput('topic');
     const message = core.getInput('message');
 
-    const client = new http.HttpClient();
+    const client = new http.HttpClient('thekarel/twist-notify');
 
     await client.post(url, {
       topic,

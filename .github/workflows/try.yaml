@@ -3,9 +3,11 @@ on:
   workflow_dispatch:
     inputs:
       topic:
+        description: 'The topic to use - will be created if it does not exist'
         required: true
         type: string
       message:
+        description: 'The message to send - can be markdown'
         required: true
         type: string
 jobs:

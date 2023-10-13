@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu@latest
     steps:
     - name: Send POST request
-      uses: owner/repo@main
+      uses: thekarel/twist-notify@main
       with:
         topic: ${{ inputs.topic }}
         message: ${{ inputs.message }}

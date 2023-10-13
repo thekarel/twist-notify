@@ -9,10 +9,10 @@ async function run() {
 
     const client = new http.HttpClient('thekarel/twist-notify');
 
-    await client.post(url, {
+    await client.post(url, JSON.stringify({
       topic,
       message
-    });
+    }));
   } catch (error) {
     core.setFailed(error.message);
   }

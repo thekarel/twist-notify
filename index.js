@@ -9,13 +9,10 @@ async function run() {
 
     const client = new http.HttpClient();
 
-    const response = await client.post(url, {
+    await client.post(url, {
       topic,
       message
     });
-
-    // Log response status
-    console.log(```Response status: ${response.status}```);
   } catch (error) {
     core.setFailed(error.message);
   }

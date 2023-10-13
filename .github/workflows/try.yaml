@@ -1,0 +1,20 @@
+name: Send a test message
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        required: true
+        type: string
+      message:
+        required: true
+        type: string
+jobs:
+  message:
+    runs-on: ubuntu@latest
+    steps:
+    - name: Send POST request
+      uses: owner/repo@main
+      with:
+        topic: ${{ inputs.topic }}
+        message: ${{ inputs.message }}
+        url: ${{ secrets.TWIST_URL }}
